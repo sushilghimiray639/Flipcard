@@ -10,12 +10,13 @@ function flipCard(cardElement, index) {
   const backFace = cardElement.querySelector(".card-back");
   const result = cardResults[index];
 
-  backFace.textContent = result;
-
+  // Use emojis instead of text
   if (result === "Win") {
-    backFace.style.backgroundColor = "#27ae60"; // Green
+    backFace.textContent = "🎉";
+    backFace.style.backgroundColor = "#27ae60";
   } else {
-    backFace.style.backgroundColor = "#e74c3c"; // Red
+    backFace.textContent = "❌";
+    backFace.style.backgroundColor = "#e74c3c";
   }
 
   cardElement.classList.add("is-flipped");
